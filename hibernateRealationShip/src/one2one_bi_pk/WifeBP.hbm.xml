@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="one2one_bi_pk.WifeBP" table="wifeBP">
+	  
+	     <id name="id">
+	         <generator class="native"></generator>
+	     </id>
+	     <property name="name"></property>
+	     <one-to-one name="husbandBP" property-ref="wifeBP"></one-to-one>
+    </class>
+	
+</hibernate-mapping>

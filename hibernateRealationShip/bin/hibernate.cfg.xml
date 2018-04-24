@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1234</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+
+<!--         <mapping class="one2one_uni_fk.Husband"></mapping> -->
+<!--         <mapping class="one2one_uni_fk.Wife"></mapping> -->
+<!--         <mapping class="one2one_bi_fk.HusbandB"></mapping> -->
+<!--         <mapping class="one2one_bi_fk.WifeB"></mapping> -->
+<!--          <mapping class="one2one_bi_pk.HusbandUP"></mapping>     -->
+<!--         <mapping class="one2one_uni_pk.WifeUP"></mapping> -->
+<!--         <mapping resource="one2one_bi_pk/WifeBP.hbm.xml"></mapping> -->
+<!--         <mapping resource="one2one_bi_pk/HusbandBP.hbm.xml"></mapping> -->
+<!--         <mapping resource ="one2one_uni_pk/HusbandUP.hbm.xml"/> -->
+<!--         <mapping class="one2one_uni_fk_composite.HusbandUFC"/> -->
+<!--         <mapping class="one2one_uni_fk_composite.WifeUFC"/> -->
+<!--         <mapping class="component.HusbandC"/> -->
+<!--         <mapping class="many2one_uni.Group"/> -->
+<!--         <mapping class="many2one_uni.User"/> -->
+         <mapping class="one2many_uni.Group1"/> 
+        <mapping class="one2many_uni.User1"/> 
+<!--         <mapping class="many2one_one2many_uni.GroupMO"/> -->
+<!--         <mapping class="many2one_one2many_uni.UserMO"/> -->
+<!--              <mapping class="many2many_uni.Student"/> -->
+<!--              <mapping class="many2many_uni.Teacher"/>   -->
+
+    </session-factory>
+
+</hibernate-configuration>
